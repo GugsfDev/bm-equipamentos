@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BM Equipamentos — Equipamentos de Proteção Individual.">
+  <title>BM Equipamentos | EPI e Segurança</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">BM</span>
+      <span class="brand-name">EQUIPAMENTOS</span>
+    </a>
+    <nav class="nav-links">
+      <a class="nav-tab active" href="#comprar">Comprar</a>
+      <a class="nav-tab" href="#categorias">Categorias</a>
+      <a class="nav-tab" href="#sobre">Sobre nós</a>
+      <a class="nav-tab" href="#contato">Contato</a>
+    </nav>
+    <button class="cart-button" id="openCart" type="button">
+      Carrinho <span id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="comprar">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">EQUIPAMENTOS DE PROTEÇÃO INDIVIDUAL</span>
+      <h1>Proteção profissional para quem <span>faz acontecer.</span></h1>
+      <p>Encontre EPIs para sua operação com uma experiência de compra simples, segura e objetiva.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#produtos">Ver produtos</a>
+        <a class="button button-secondary" href="#contato">Fale conosco</a>
+      </div>
+    </div>
+    <div class="hero-panel hero-image">
+      <img src="https://5s.shop/cdn/shop/files/5s-warehouse-worker-high-vis-safety-gear.jpg?v=1746094466&width=1800" alt="Profissional utilizando equipamentos de proteção individual">
+      <div class="image-caption"><span>PROTEÇÃO PROFISSIONAL</span><strong>Segurança em cada detalhe.</strong></div>
+      <div class="hero-specs">
+        <div><b>01</b><span>Proteção</span></div>
+        <div><b>02</b><span>Qualidade</span></div>
+        <div><b>03</b><span>Atendimento</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="categories-section" id="categorias">
+  <div class="container">
+    <div class="section-heading">
+      <div><span class="eyebrow">NAVEGUE</span><h2>Encontre o EPI ideal</h2></div>
+    </div>
+    <div class="category-list">
+      <button class="category active" data-category="Todos">Todos</button>
+      <button class="category" data-category="Luvas">Luvas</button>
+      <button class="category" data-category="Capacetes">Capacetes</button>
+      <button class="category" data-category="Óculos">Óculos</button>
+      <button class="category" data-category="Auditivo">Proteção auditiva</button>
+      <button class="category" data-category="Calçados">Calçados</button>
+      <button class="category" data-category="Vestimentas">Vestimentas</button>
+    </div>
+  </div>
+</section>
+
+<section class="products-section" id="produtos">
+  <div class="container">
+    <div class="section-heading product-heading">
+      <div><span class="eyebrow">CATÁLOGO</span><h2>Produtos em destaque</h2></div>
+      <div class="search-box"><input id="search" type="search" placeholder="Buscar produto..."></div>
+    </div>
+    <div id="productGrid" class="product-grid"></div>
+  </div>
+</section>
+
+<section class="about-section" id="sobre"><div class="container about-grid"><div><span class="eyebrow">SOBRE NÓS</span><h2>Equipamentos para proteger pessoas e operações.</h2></div><div><p>A BM Equipamentos é apresentada aqui como uma loja especializada em equipamentos de proteção individual, com foco em facilitar a compra de itens para empresas e profissionais.</p><p>O catálogo pode ser personalizado com os produtos, marcas, certificados e informações reais da empresa antes da publicação.</p></div></div></section>\n\n<section class="trust" id="empresa">
+  <div class="container trust-grid">
+    <div><span class="eyebrow">POR QUE BM?</span><h2>Uma compra mais simples para sua empresa.</h2></div>
+    <div class="trust-card"><strong>01</strong><h3>Catálogo organizado</h3><p>Produtos separados por categoria para encontrar rapidamente o que você precisa.</p></div>
+    <div class="trust-card"><strong>02</strong><h3>Pagamento simulado</h3><p>Confira descontos, parcelas e valores antes de avançar com o pedido.</p></div>
+    <div class="trust-card"><strong>03</strong><h3>Atendimento próximo</h3><p>Estrutura preparada para receber pedidos e solicitações de orçamento.</p></div>
+  </div>
+</section>
+</main>
+
+<footer id="contato">
+  <div class="container footer-grid">
+    <div><a class="brand" href="#"><span class="brand-mark">BM</span><span class="brand-name">EQUIPAMENTOS</span></a><p>Equipamentos de Proteção Individual.</p></div>
+    <div><span class="footer-label">ATENDIMENTO</span><p>Segunda a sexta<br>08:00 às 18:00</p></div>
+    <div><span class="footer-label">CONTATO</span><p>WhatsApp: (00) 00000-0000<br>E-mail: contato@bmequipamentos.com.br</p></div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="cartModal" aria-hidden="true">
+  <aside class="cart-drawer">
+    <div class="drawer-header"><div><span class="eyebrow">SEU PEDIDO</span><h2>Carrinho</h2></div><button class="close" id="closeCart" type="button" aria-label="Fechar">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="button button-primary full" id="goPayment" type="button">Continuar para pagamento</button>
+    </div>
+  </aside>
+</div>
+
+<div class="modal-backdrop" id="paymentModal" aria-hidden="true">
+  <div class="payment-modal">
+    <div class="drawer-header"><div><span class="eyebrow">FINALIZAÇÃO</span><h2>Simular pagamento</h2></div><button class="close" id="closePayment" type="button">×</button></div>
+    <div class="payment-layout">
+      <div>
+        <div class="payment-options">
+          <button class="payment-method active" data-method="pix" type="button"><strong>PIX</strong><span>5% de desconto</span></button>
+          <button class="payment-method" data-method="card" type="button"><strong>Cartão</strong><span>Até 12 parcelas</span></button>
+          <button class="payment-method" data-method="boleto" type="button"><strong>Boleto</strong><span>À vista</span></button>
+        </div>
+        <div id="installmentsWrap" class="field">
+          <label for="installments">Parcelamento</label>
+          <select id="installments">
+            <option value="1">1x sem juros</option>
+            <option value="2">2x sem juros</option>
+            <option value="3">3x sem juros</option>
+            <option value="6">6x com juros</option>
+            <option value="12">12x com juros</option>
+          </select>
+        </div>
+      </div>
+      <div class="payment-result">
+        <span>Resumo da simulação</span>
+        <div class="result-total" id="paymentTotal">R$ 0,00</div>
+        <p id="paymentDescription">Selecione uma forma de pagamento.</p>
+        <button class="button button-primary full" id="finishSimulation" type="button">Concluir simulação</button>
+        <small>Esta etapa é apenas uma simulação. Nenhuma cobrança é realizada.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
